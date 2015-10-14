@@ -1,13 +1,15 @@
 setwd("/Users/patriciaobrien/DataVisualization/DV_RProject3/01 Data")
 
-file_path <- "NAME_OF_CVS"
+file_path <- "Education.xls"
 
 df <- read.csv(file_path, stringsAsFactors = FALSE)
 
 # Replace "." (i.e., period) with "_" in the column names.
 names(df) <- gsub("\\.+", "_", names(df))
 
-#str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
+str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
+
+summary(df)
 
 measures <- c("Current_Annual_Salary", "X2014_Gross_Pay_Received", "X2014_Overtime_Pay")
 #measures <- NA # Do this if there are no measures.
