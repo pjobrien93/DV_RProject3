@@ -1,4 +1,4 @@
-setwd("/Users/patriciaobrien/DataVisualization/DV_RProject3/01 Data")
+setwd("~/DataVisualization/DV_RProject3/01 Data")
 
 file_path <- "Unemployment.csv"
 
@@ -11,7 +11,7 @@ str(df) # Uncomment this and  run just the lines to here to get column types to 
 
 summary(df)
 
-measures <- c("Civilian_labor_force_2006", "Employed_2006", "Unemployed_2006", "Civilian_labor_force_2007",  "Employed_2007", "Unemployed_2007", "Civilian_labor_force_2008", "Employed_2008", "Unemployed_2008",  "Civilian_labor_force_2009", "Employed_2009", "Unemployed_2009", "Civilian_labor_force_2010", "Employed_2010", "Unemployed_2010", "Civilian_labor_force_2011", "Employed_2011", "Unemployed_2011", "Civilian_labor_force_2012", "Employed_2012", "Unemployed_2012", "Civilian_labor_force_2013", "Employed_2013", "Unemployed_2013", "Unemployment_rate_2013", "Civilian_labor_force_2014", "Employed_2014", "Unemployed_2014", "Median_Household_Income_2013")
+measures <- c("Labor_force_2006", "Employed_2006", "Unemployed_2006", "Labor_force_2007",  "Employed_2007", "Unemployed_2007", "Labor_force_2008", "Employed_2008", "Unemployed_2008",  "Labor_force_2009", "Employed_2009", "Unemployed_2009", "Labor_force_2010", "Employed_2010", "Unemployed_2010", "Labor_force_2011", "Employed_2011", "Unemployed_2011", "Labor_force_2012", "Employed_2012", "Unemployed_2012", "Labor_force_2013", "Employed_2013", "Unemployed_2013", "Unemployment_rate_2013", "Labor_force_2014", "Employed_2014", "Unemployed_2014", "Median_Income_2013")
 names(df)
 
 #measures <- NA # Do this if there are no measures.
@@ -37,8 +37,8 @@ if( length(measures) > 1 || ! is.na(dimensions)) {
 library(lubridate)
 # Fix date columns, this needs to be done by hand because | needs to be correct.
 #                                                        \_/
-df$Order_Date <- gsub(" [0-9]+:.*", "", gsub(" UTC", "", mdy(as.character(df$Order_Date), tz="UTC")))
-df$Ship_Date  <- gsub(" [0-9]+:.*", "", gsub(" UTC", "", mdy(as.character(df$Ship_Date),  tz="UTC")))
+#df$Order_Date <- gsub(" [0-9]+:.*", "", gsub(" UTC", "", mdy(as.character(df$Order_Date), tz="UTC")))
+#df$Ship_Date  <- gsub(" [0-9]+:.*", "", gsub(" UTC", "", mdy(as.character(df$Ship_Date),  tz="UTC")))
 
 # The following is an example of dealing with special cases like making state abbreviations be all upper case.
 # df["State"] <- data.frame(lapply(df["State"], toupper))
