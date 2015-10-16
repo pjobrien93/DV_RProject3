@@ -1,6 +1,6 @@
 setwd("/Users/patriciaobrien/DataVisualization/DV_RProject3/01 Data")
 
-file_path <- "Education.xls"
+file_path <- "test.csv"
 
 df <- read.csv(file_path, stringsAsFactors = FALSE)
 
@@ -11,7 +11,8 @@ str(df) # Uncomment this and  run just the lines to here to get column types to 
 
 summary(df)
 
-measures <- c("Current_Annual_Salary", "X2014_Gross_Pay_Received", "X2014_Overtime_Pay")
+measures <- c("Less_than_a_HS_diploma_1970", "HS_diploma_only_1970", "Some_college_1_3_years_1970", "X4_years_of_college_or_more_1970", "Less_than_a_HS_diploma_1980", "HS_diploma_only_1980", "Some_college_1_3_years_1980", "X4_years_of_college_or_more_1980", "Less_than_a_HS_diploma_1990", "HS_diploma_only_1990", "Some_college_or_associate_s_degree_1990", "Bachelor_s_degree_or_more_1990", "Less_than_a_HS_diploma_2000", "HS_diploma_only_2000", "Some_college_or_associate_s_degree_2000", "Bachelor_s_degree_or_more_2000", "Less_than_a_HS_diploma_09_13", "HS_diploma_only_09_13", "Some_college_or_associate_s_degree_09_13", "Bachelor_s_degree_or_more_09_13")
+
 #measures <- NA # Do this if there are no measures.
 
 # Get rid of special characters in each column.
@@ -65,3 +66,4 @@ if( length(measures) > 1 || ! is.na(measures)) {
 }
 sql <- paste(sql, ");")
 cat(sql)
+
