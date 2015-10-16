@@ -14,4 +14,7 @@ summary(emp)
 head(edu)
 head(emp)
 
-dplyr::inner_join(edu, emp, by="AREA_NAME") %>% View
+
+# plots number of people who have a college degree vs. number of people who are employed by state.
+# the states are the top 6 median income states and the bottom 6 median income states
+dplyr::inner_join(emp, edu, by="AREA_NAME") %>% group_by(STATE.x) %>% filter(STATE.x==STATE.y & STATE.x %in% c("MS", "AR", "WV", "KY", "NM", "TN", "PR", "MD", "NJ", "AK", "HI", "CT")) %>% ggplot(aes(x = as.numeric(as.character(EMPLOYED_2009)), y = as.numeric(as.character(BACHELORS2009_13)), color = STATE.x)) + labs(x="Number of People Who Hold Bachelor Degrees", y=paste("Number of People Who Are Employed")) + geom_point()
