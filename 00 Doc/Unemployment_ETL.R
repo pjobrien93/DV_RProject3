@@ -1,4 +1,4 @@
-setwd("~/DataVisualization/DV_RProject3/01 Data")
+setwd("/Users/patriciaobrien/DataVisualization/DV_RProject3/01 Data")
 
 file_path <- "Unemployment.csv"
 
