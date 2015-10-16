@@ -13,3 +13,7 @@ summary(emp)
 
 head(edu)
 head(emp)
+
+dplyr::inner_join(edu, emp, by="FIPS_CODE") %>% View
+dplyr::outer_join(edu, emp, by="FIPS_CODE") %>% View
+dplyr::left_join(emp, emp, by = "AREA_NAME") %>% View
