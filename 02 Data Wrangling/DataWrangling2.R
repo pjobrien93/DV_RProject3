@@ -8,10 +8,4 @@ edu <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?qu
 
 emp <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from UNEMPLOYMENT"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521/PDBF15DV.usuniversi01134.oraclecloud.internal', USER='cs329e_pjo293', PASS='orcl_pjo293', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))
 
-summary(edu)
-summary(emp)
-
-head(edu)
-head(emp)
-
-dplyr::inner_join(edu, emp, by="AREA_NAME") %>% View
+dplyr::full_join(edu, emp, by="FIPS_CODE") %>% View
