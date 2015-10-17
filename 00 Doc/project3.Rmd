@@ -1,0 +1,51 @@
+---
+title: "Data Visualization R Project3"
+output: html_document
+---
+  
+##Mohammad Chauhan & Patricia O'brien
+  
+  
+```{r}
+source("../02 Data Wrangling/DataWrangling1.R", echo = TRUE)
+```
+
+This workflow plots number of people who have a college degree vs. number of people who are employed. Each point represents a state; the states are the top 6 median income states and bottom 6 median income states. As we can see, the more people who hold bachelor degrees, the more people there are in the state who are employed. Tennessee was one of the states in the bottom 6 for median income, but surprisingly it placed higher than most states for number of people who hold bachelor degrees and number of people who are employed. Additionally, Hawaii was in the top 6 median income states, but has a relatively low amount of people who have bachelor degrees and a low amount of people who are employed. Therefor median income doesn't correlate to number of people who hold bachelor degrees or who are employed. 
+
+```{r}
+source("../02 Data Wrangling/DataWrangling2.R", echo = TRUE)
+```
+
+This workflow plots boxplot showing median salary for each county for each urban influence code. The urban influence codes are as follows:
+
+1	Large-in a metro area with at least 1 million residents or more
+
+2	Small-in a metro area with fewer than 1 million residents
+
+3	Micropolitan adjacent to a large metro area
+
+4	Noncore adjacent to a large metro area
+
+5	Micropolitan adjacent to a small metro area
+
+6	Noncore adjacent to a small metro with town of at least 2,500 residents
+
+7	Noncore adjacent to a small metro and does not contain a town of at least 2,500 residents
+
+8	Micropolitan not adjacent to a metro area
+
+9	Noncore adjacent to micro area and contains a town of 2,500-19,999 residents
+
+10	Noncore adjacent to micro area and does not contain a town of at least 2,500 residents
+
+11	Noncore not adjacent to a metro/micro area and contains a town of 2,500  or more residents
+
+12	Noncore not adjacent to a metro/micro area and does not contain a town of at least 2,500 residents
+
+Counties classified as a large-in a metro area with at least 1 million residents or more have the biggest spread and average for median income in 2013. Small-in a metro area with fewer than 1 million residents, noncore adjacent to a small metro with town of at least 2,500 residents, and noncore adjacent to micro area and contains a town of 2,500-19,999 residents had the smallest median incomes. 
+
+```{r}
+source("../02 Data Wrangling/DataWrangling3.R", echo = TRUE)
+```
+
+In this workflow we plotted the unemployment rate versus the number of people who had highschool diplomas for each county in the US. The point highest point on the graph is probably a county that has a large population. It's unemployment rate is not significantly low or high. 
